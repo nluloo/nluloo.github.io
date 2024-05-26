@@ -1,0 +1,919 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #a19065;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+body {
+  background-color: #1F2527;
+  margin: 0;
+}
+
+body.back {
+  width: 100vw;
+  background-image: url("imgMain/fon.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.container {
+  width: 100%;
+  max-width: 84%;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 138px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.logo {
+  background-image: url("logo/logo.svg");
+  height: 95px;
+  width: 80px;
+  background-size: cover;
+  mix-blend-mode: lighten;
+}
+
+div.logo1 {
+  background-image: url("logo/logo2.svg");
+  height: 80px;
+  width: 80px;
+  background-size: cover;
+  mix-blend-mode: lighten;
+}
+
+.place p {
+  color: #FFF;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.place {
+  width: 120px;
+  height: 44px;
+  display: flex;
+  gap: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.film {
+  margin-top: 13%;
+}
+
+.film .ButtonAboutFilm {
+  margin-top: 3vw;
+}
+
+.nameFilm .SocialNetwork {
+  color: #DBDBDB;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Syne", sans-serif;
+  width: 50vw;
+  font-size: 4vw;
+  font-weight: 700;
+  letter-spacing: 1vw;
+}
+
+.firstFilm {
+  width: 20vw;
+  height: 5vw;
+  display: flex;
+}
+
+.burger {
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  right: 20px;
+  border-radius: 4px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 101;
+}
+
+.burger span {
+  position: relative;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  position: absolute;
+}
+
+.burger span, .burger span::before, .burger span::after {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  outline: 1px solid transparent;
+  transition-duration: 0.3s;
+}
+
+.burger span::before, .burger span::after {
+  position: absolute;
+  content: "";
+}
+
+.burger span::before {
+  top: -9px;
+}
+
+.burger span::after {
+  top: 9px;
+}
+
+.burger.clicked span {
+  background-color: transparent;
+}
+
+.burger.clicked span::before {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.burger.clicked span::after {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.burger:hover {
+  cursor: pointer;
+}
+
+nav {
+  background-color: #2a2a2a;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  height: 100%;
+  max-width: 35%;
+  width: 100%;
+  padding: 100px 40px 60px 40px;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+nav.show {
+  transform: translateX(0px);
+  z-index: 100;
+}
+
+nav.show ul.main li {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+nav.show ul.main li:nth-child(1) {
+  transition-delay: 0.15s;
+}
+
+nav.show ul.main li:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+nav.show ul.main li:nth-child(3) {
+  transition-delay: 0.45s;
+}
+
+nav.show ul.main li:nth-child(4) {
+  transition-delay: 0.6s;
+}
+
+nav.show ul.main li:nth-child(5) {
+  transition-delay: 0.75s;
+}
+
+nav.show ul.main li:nth-child(6) {
+  transition-delay: 0.9s;
+}
+
+nav.show ul.main li:nth-child(7) {
+  transition-delay: 1.05s;
+}
+
+nav.show ul.main li:nth-child(8) {
+  transition-delay: 1.2s;
+}
+
+nav.show ul.main li:nth-child(9) {
+  transition-delay: 1.35s;
+}
+
+nav.show .about, nav.show .social, nav.show ul.sub {
+  transform: translateY(0px);
+  opacity: 1;
+  transition-delay: 0.85s;
+}
+
+nav ul.main {
+  list-style-type: none;
+}
+
+nav ul.main li {
+  margin-bottom: 20px;
+  transform: translateX(40px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+nav ul.main li a {
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  display: block;
+  letter-spacing: 5px;
+  font-weight: 600;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+}
+
+nav ul.main li a span {
+  color: #b7ac7f;
+}
+
+nav ul.main li a:hover {
+  color: #b7ac7f;
+}
+
+nav .about {
+  margin-top: 40px;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+nav .about p {
+  color: #6b6b6b;
+  font-family: "Syne", serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+}
+
+nav .social {
+  margin-top: 40px;
+  position: relative;
+  padding-bottom: 30px;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+nav .social:after {
+  content: "";
+  width: 230px;
+  height: 2px;
+  background-color: #b7ac7f;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+nav .social a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 25px;
+}
+
+nav .social a:hover svg path, nav .social a:hover svg circle {
+  fill: #b7ac7f;
+}
+
+nav .social a svg {
+  width: 100%;
+  height: 100%;
+}
+
+nav ul.sub {
+  list-style-type: none;
+  margin-top: 40px;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+nav ul.sub li {
+  margin-bottom: 10px;
+}
+
+nav ul.sub li a {
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav ul.sub li a:hover {
+  color: #b7ac7f;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  background-color: #b7ac7f;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.overlay.show {
+  opacity: 0.8;
+  visibility: visible;
+}
+
+button {
+  transition: background 0.5s;
+  display: flex;
+  width: 20vw;
+  height: 5vw;
+  color: #494646;
+  font-size: 1.7vw;
+  font-family: Oswald;
+  font-weight: 500;
+  letter-spacing: 0.1vw;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.7vw;
+  background: #AFA17D;
+  border: none;
+}
+button:hover {
+  text-decoration: none;
+  background: #8A877F;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.firstFilm {
+  transition: background 0.5s;
+  display: flex;
+  width: 20vw;
+  height: 5vw;
+  color: #494646;
+  font-size: 1.7vw;
+  font-family: Oswald;
+  font-weight: 500;
+  letter-spacing: 0.1vw;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.7vw;
+  background: #AFA17D;
+  border: none;
+}
+.firstFilm:hover {
+  text-decoration: none;
+  background: #8A877F;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.firstBlocks div div p.film-info {
+  font-size: 0.9vw;
+  text-align: justify;
+  letter-spacing: 0.03vw;
+}
+
+.posters {
+  width: 50vw;
+  height: 10vw;
+  display: flex;
+  margin-left: auto; /* Выравнивание контейнера по правому краю */
+  gap: 5%;
+}
+
+.mainList {
+  height: 80vh;
+}
+
+.sss {
+  width: 100%;
+}
+
+.bb {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.secondsPoster svg {
+  margin-bottom: -10%;
+}
+
+.firstPoster, .secondsPoster, .treePoster {
+  cursor: pointer;
+  padding: 0 3%;
+  display: flex;
+  width: 56vw;
+  height: 100%;
+  border-radius: 16px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) -0.18%, rgba(0, 0, 0, 0) 102.53%), url("imgMain/int.webp") lightgray 50%/cover no-repeat;
+  box-shadow: 4px 8px 10px 0px rgba(0, 0, 0, 0.3);
+  align-items: flex-end;
+}
+
+.secondsPoster {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) -0.18%, rgba(0, 0, 0, 0) 102.53%), url("imgMain/Shutter-Island-21.jpg") lightgray 50%/cover no-repeat;
+}
+
+.treePoster {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) -0.18%, rgba(0, 0, 0, 0) 102.53%), url("imgMain/106363.jpg") lightgray 50%/cover no-repeat;
+}
+
+.firstPoster p, .secondsPoster p, .treePoster p {
+  width: 50%;
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 1vw;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.carousel {
+  display: none;
+}
+
+.novently {
+  margin: 0px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrows {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.arrows svg {
+  margin-bottom: 2vw;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.text {
+  text-align: center;
+  padding-right: 10px;
+}
+
+.text p {
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 2.1vw;
+  margin-bottom: 3px;
+  font-weight: 500;
+  letter-spacing: 4px;
+}
+
+#FilmNovently {
+  width: 100%;
+  height: 60vh;
+  margin: 7% 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+#FilmNovently a {
+  width: 100%;
+}
+
+.FirstFilm > a,
+.SecondFilm > a,
+.FourFilm > a,
+.FiveFilm > a,
+.hideLeft > a,
+.hideRight > a {
+  pointer-events: none;
+}
+
+#FilmNovently div {
+  position: absolute;
+  transition: transform 1s, left 1s, opacity 1s, z-index 0s, width 1s, height 1s;
+}
+
+.first, .five {
+  border-radius: 16px;
+  box-shadow: 4px 8px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.first {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) -0.18%, rgba(0, 0, 0, 0) 102.53%), url("imgMain/MV5BMDBmYTZjNjUtN2M1MS00MTQ2LTk2ODgtNzc2M2QyZGE5NTVjXkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_.jpg") lightgray 50%/cover no-repeat;
+}
+
+.five {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) -0.18%, rgba(0, 0, 0, 0) 102.53%), url("imgMain/MV5BNGEyYTQyZDEtOGVjMS00Yzc1LThmNjgtYzUzOWJjZDhlMTUwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg") lightgray 50%/cover no-repeat;
+}
+
+.hideLeft {
+  left: 0;
+  opacity: 0;
+}
+
+.hideRight {
+  left: 87%;
+  opacity: 0;
+}
+
+.hideLeft, .hideRight {
+  width: 12.2vw;
+  height: 21vw;
+}
+
+.FirstFilm, .FiveFilm {
+  width: 13vw;
+  height: 22vw;
+}
+
+.FirstFilm {
+  left: 15%;
+}
+
+.SecondFilm {
+  left: 25%;
+}
+
+.TreeFilm {
+  z-index: 4;
+  left: 40%;
+  cursor: pointer;
+}
+
+.FourFilm {
+  left: 57%;
+}
+
+.FiveFilm {
+  left: 70%;
+  z-index: 1;
+}
+
+.SecondFilm, .FourFilm {
+  z-index: 3;
+  width: 16vw;
+  height: 27vw;
+}
+
+.second, .four {
+  border-radius: 16px;
+  box-shadow: 4px 8px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.second {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) -0.18%, rgba(0, 0, 0, 0) 102.53%), url("imgMain/Poor-Things-Poster1.jpg") lightgray 50%/cover no-repeat;
+}
+
+.four {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) -0.18%, rgba(0, 0, 0, 0) 102.53%), url("imgMain/MV5BZjZkNThjNTMtOGU0Ni00ZDliLThmNGUtZmMxNWQ3YzAxZTQ1XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg") lightgray 50%/cover no-repeat;
+}
+
+.first, .second, .t, .four, .five, .tleft, .tright {
+  width: 100%;
+  height: 85%;
+}
+
+#FilmNovently p {
+  position: absolute;
+  bottom: 0;
+}
+
+.t, .tleft, .tright {
+  position: relative;
+  border-radius: 16px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) -0.18%, rgba(0, 0, 0, 0) 102.53%), url("imgMain/poster116836_2.webp") lightgray 50%/cover no-repeat;
+  box-shadow: 4px 8px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.tleft {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) -0.18%, rgba(0, 0, 0, 0) 102.53%), url("posters/history.webp") lightgray 50%/cover no-repeat;
+}
+
+.tright {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) -0.18%, rgba(0, 0, 0, 0) 102.53%), url("posters/ss.jpg") lightgray 50%/cover no-repeat;
+}
+
+.FirstFilm, .FiveFilm, .SecondFilm, .TreeFilm, .FourFilm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.TreeFilm {
+  width: 19vw;
+  height: 32vw;
+}
+
+.novently #FilmNovently p {
+  margin-top: 3%;
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 1.5vw;
+  font-weight: 500;
+  letter-spacing: 3px;
+  white-space: nowrap;
+}
+
+.stocks {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 13.5%;
+  margin-bottom: 7vw;
+  padding-bottom: 7vw;
+}
+
+.textFirst {
+  width: 90%;
+  color: #FFF;
+  margin-top: 10vw;
+  font-family: Oswald;
+  font-size: 2.1vw;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.textSecond {
+  color: #FFF;
+  width: 90%;
+  text-align: justify;
+  font-family: Oswald;
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
+img {
+  border-radius: 1.5vw;
+  opacity: 0.8;
+  background: linear-gradient(180deg, rgba(12, 11, 11, 0) 0.09%, rgba(0, 0, 0, 0) 19.56%, rgba(9, 8, 8, 0.24) 33.03%, rgba(0, 0, 0, 0.4) 99.91%), lightgray 50%/cover no-repeat;
+  margin-top: 10%;
+  width: 40vw;
+  height: 29vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.firstBlock {
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.application {
+  margin-bottom: 3vw;
+  padding-bottom: 7vw;
+}
+
+.application p {
+  color: #FFF;
+  font-family: Oswald;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.application p.ssss {
+  width: 32%;
+  color: #AFA17D;
+  text-align: justify;
+  font-family: Oswald;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.rectang {
+  display: flex;
+  flex-direction: column;
+  width: 798px;
+  height: 548px;
+  border-radius: 40px;
+  background: rgba(73, 70, 70, 0.4);
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+.rectang input {
+  padding-left: 3%;
+  border-radius: 2vw;
+  background: #494646;
+  color: #AFA17D;
+  font-size: 2vw;
+  font-family: Oswald;
+  font-weight: 500;
+  border: none;
+  width: 58%;
+  height: 17%;
+}
+
+::-moz-placeholder {
+  color: #a09e99;
+  text-align: justify;
+  font-family: Oswald;
+  font-size: 100%;
+  font-weight: 500;
+}
+
+::placeholder {
+  color: #a09e99;
+  text-align: justify;
+  font-family: Oswald;
+  font-size: 100%;
+  font-weight: 500;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer-text {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 1%;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid gray;
+}
+
+.footer-text p {
+  cursor: pointer;
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 2.5px;
+  width: 14vh;
+  text-align: center;
+  transition: all 0.3s ease-out;
+}
+.footer-text p:hover {
+  color: #AFA17D;
+}
+
+.FooterLine {
+  margin-top: 2%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  color: #6C6C6C;
+  font-family: Oswald;
+  font-size: 0.5vw;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.arrow {
+  transform: scale(-1);
+}
+
+.rect {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 40px;
+  background: rgba(73, 70, 70, 0.4);
+  gap: 2.1%;
+  margin-bottom: 6vw;
+}
+
+.rect div {
+  margin: 1% 3%;
+}
+
+.rect div .firstElem, .rect div .secondElem {
+  width: 40%;
+}
+
+select, input {
+  border-radius: 1.5vw;
+  background: #494646;
+  width: 90%;
+  height: 70%;
+  color: #AFA17D;
+  text-align: justify;
+  font-family: Oswald;
+  font-size: 1.5vw;
+  font-weight: 500;
+  letter-spacing: 3.6px;
+  border: none;
+}
+
+#editSelect {
+  height: 20%;
+}
+
+.secondHead {
+  text-align: center;
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.firstElem p, .secondElem p {
+  color: #AFA17D;
+  text-align: justify;
+  font-family: Oswald;
+  font-size: 1.3vw;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.secondPage-first {
+  display: flex;
+  margin-top: 1%;
+  margin-bottom: -15%;
+  display: flex;
+  flex-direction: row;
+  gap: 15%;
+}
+
+.selectFilm {
+  width: 100%;
+}
+
+.block {
+  border-radius: 1.5vw;
+  background: #494646;
+  width: 10vw;
+  height: 5vw;
+  border: none;
+}
+
+.text, .stocks, .application {
+  border-bottom: 1px solid white;
+}
+
+.novently .text {
+  border-bottom: none;
+}
+
+div button.block.active {
+  background-color: #8A877F;
+}
+
+div.secondBlocks div div div.obs {
+  background-color: #7B7B79;
+  pointer-events: none;
+}

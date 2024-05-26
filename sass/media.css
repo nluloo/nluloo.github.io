@@ -1,0 +1,438 @@
+@charset "UTF-8";
+@media (max-width: 1000px) {
+  p {
+    letter-spacing: 0.3vw;
+  }
+  .mainList {
+    height: 100vw;
+  }
+  h1.Error {
+    font-size: 5vw;
+  }
+  p.pError {
+    font-size: 3vw;
+  }
+  button.bError {
+    width: 25vw;
+    height: 7vw;
+    font-size: 2vw;
+  }
+  .text p {
+    font-size: 3vw;
+  }
+  .place svg {
+    width: 25px;
+    height: 32px;
+  }
+  body.back {
+    background-size: cover;
+    height: 50vh;
+    background-image: none;
+  }
+  .rectang {
+    width: 100%;
+    height: 70vh;
+  }
+  .rectang input {
+    font-size: 4vw;
+  }
+  .rectang button {
+    width: 30vw;
+    height: 8vw;
+    font-size: 4vw;
+    border-radius: 2vw;
+  }
+  .application .textFirst {
+    font-size: 3vw;
+  }
+  .film {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15%;
+    height: 30%;
+  }
+  .film p {
+    text-align: center;
+  }
+  .firstPoster, .secondsPoster, .treePoster {
+    display: none;
+  }
+  .ButtonAboutFilm, .firstFilm {
+    width: 29vw;
+    height: 8vw;
+    font-size: 3vw;
+    border-radius: 2.5vw;
+  }
+  .posters {
+    display: none;
+  }
+  #FilmNovently {
+    height: 30vh;
+  }
+  .carousel {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 105vw;
+    width: 100%;
+    left: 0;
+    z-index: -1;
+  }
+  .carousel .imagess {
+    position: absolute;
+    top: 0;
+    height: 105vw;
+    width: 100%;
+    left: 0;
+    z-index: -1;
+  }
+  .textSecond {
+    font-size: 2vw;
+  }
+  .control {
+    position: relative;
+    top: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    height: 4vw;
+    gap: 2vw;
+  }
+  .control a {
+    display: block;
+    width: 3vw; /* Размер кружка */
+    height: 3vw;
+    background-color: #a0a0a0; /* Цвет кружка */
+    border-radius: 50%; /* Скругление краев */
+    opacity: 0.5;
+    transition: width 0.3s ease-in, height 0.3s ease-in;
+  }
+  .control a.active {
+    background-color: #2e2e2e; /* Цвет активного кружка */
+    opacity: 0.5;
+    border: 0.5vw solid white;
+    width: 4vw;
+    height: 4vw;
+    transition: width 0.3s ease-out, height 0.3s ease-out;
+  }
+  .content.active {
+    display: block;
+    z-index: -1;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+  }
+  .content {
+    opacity: 0; /* Начальная прозрачность */
+    transition: opacity 1s ease-in-out; /* Плавное изменение прозрачности */
+  }
+  .content.active {
+    opacity: 1; /* Показать элемент */
+  }
+  .fade-ou {
+    opacity: 0;
+    transform: translateX(-150px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  .fade-out {
+    opacity: 0;
+    transform: translateX(150px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  .SocialNetwork {
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  .firstFilm {
+    transition: opacity 1s ease, transform 1s ease;
+  }
+}
+@media (max-width: 640px) {
+  nav.aaa {
+    max-width: 80vw;
+  }
+  nav {
+    padding: 120px 90px 70px 90px;
+  }
+  .control {
+    top: 20%;
+  }
+  .rectang button {
+    height: 17%;
+    width: 49%;
+  }
+  #FilmNovently {
+    margin-top: 17vw;
+  }
+  .textt p {
+    color: #6C6C6C;
+    font-family: Oswald;
+    font-size: 4vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.5px;
+    width: 14vh;
+  }
+  div.novently #FilmNovently p {
+    font-size: 3vw;
+  }
+  .rectang {
+    width: 100%;
+    height: 40vh;
+    border-radius: 6vw;
+  }
+  div.overlay.show {
+    display: none;
+  }
+  .rectang input {
+    font-size: 2vw;
+    border-radius: 4vw;
+    font-size: 4vw;
+    height: 13vw;
+  }
+  .rectang button {
+    border-radius: 4vw;
+    font-size: 5vw;
+    height: 13vw;
+  }
+  .application p.ssss {
+    font-size: 4vw;
+  }
+  .application .textFirst {
+    font-size: 5vw;
+    width: 100%;
+    text-align: center;
+  }
+  .application {
+    justify-content: center;
+    align-items: center;
+  }
+  .text p {
+    font-size: 7vw;
+  }
+  .nameFilm .SocialNetwork {
+    font-size: 7vw;
+    width: 100%;
+  }
+  .novently .FilmNovently p {
+    font-size: 3vw;
+  }
+  .textFirst {
+    font-size: 5vw;
+    width: 100%;
+    margin-bottom: 6vw;
+  }
+  .textSecond {
+    font-size: 4vw;
+    width: 100%;
+  }
+  div.stocks button {
+    width: 23vw;
+    height: 7vw;
+    border-radius: 2vw;
+    color: #494646;
+    font-size: 2.2vw;
+    font-style: normal;
+    position: relative;
+    top: 45vw;
+    left: 50vw;
+    z-index: 2;
+  }
+  .TreeFilm {
+    width: 35vw;
+    height: 59vw;
+    left: 32%;
+  }
+  .SecondFilm, .FourFilm {
+    width: 28vw;
+    height: 47vw;
+  }
+  .SecondFilm {
+    left: 14.5%;
+  }
+  .FirstFilm, .FiveFilm {
+    opacity: 0;
+  }
+  .burger span {
+    width: 20px;
+  }
+  div.logo {
+    width: 50px;
+    height: 60px;
+  }
+  .footer-text p {
+    width: 20vw;
+    font-size: 4vw;
+  }
+  .place svg {
+    width: 20px;
+    height: 26px;
+  }
+  nav {
+    max-width: 100%;
+  }
+  .film {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20%;
+    height: 60%;
+  }
+  .film p {
+    text-align: center;
+  }
+  .firstPoster, .secondsPoster, .treePoster {
+    display: none;
+  }
+  .mainList {
+    height: 80vw;
+  }
+  .stocks {
+    flex-direction: column;
+  }
+  .stocks img {
+    width: 100%;
+    height: 50vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-top: 1%;
+  }
+  .first {
+    display: flex;
+    text-align: center;
+  }
+  div.logo1 {
+    height: 15vw;
+    width: 15vw;
+  }
+}
+@media (max-width: 1640px) {
+  .application p.ssss {
+    width: 55vw;
+    text-align: center;
+    margin-top: 5vw;
+  }
+}
+@media (max-width: 860px) {
+  .seet {
+    width: 100%;
+    align-items: center;
+  }
+  h1.film-name {
+    font-size: 4.5vw;
+    text-align: center;
+  }
+  h2.type-film {
+    font-size: 3vw;
+  }
+  .firstBlocks .film-description {
+    display: none;
+    gap: 4%;
+    margin-top: 6vw;
+    height: 60vw;
+    align-items: center;
+    justify-content: center;
+  }
+  .novently #FilmNovently p {
+    font-size: 1.5vw;
+  }
+  .firstBlocks div div .dell {
+    display: none;
+  }
+  .firstBlocks div div .kostyl {
+    display: flex;
+  }
+  div.firstBlocks {
+    flex-direction: column;
+    margin: 0;
+  }
+  div.firstBlocks div {
+    width: 100%;
+    align-items: center;
+  }
+  div.firstBlocks div select, input {
+    width: 50vw;
+    height: 40vw;
+  }
+  div.firstBlocks div div:nth-child(1) {
+    height: 25vw;
+    position: inherit;
+    margin-top: 6vw;
+  }
+  .firstBlocks div div.cinema {
+    height: 90vw;
+  }
+  div.firstBlocks div div:nth-child(n+1) select, input {
+    height: 10vw;
+    font-size: 3.5vw;
+    padding-left: 2vw;
+    border-radius: 3vw;
+    z-index: 2;
+  }
+  div.firstBlocks div {
+    gap: 10vw;
+  }
+  div.containerBlock div {
+    justify-content: center;
+    margin: 5vw;
+  }
+  p.price {
+    font-size: 4vw;
+  }
+  .info p {
+    font-size: 3.5vw;
+  }
+  div.secondBlocks div:nth-child(2) div div {
+    height: 4.5vw;
+    width: 4.5vw;
+  }
+  .firstBlocks div div p.film-info {
+    font-size: 2.5vw;
+  }
+  div.containerBlock div:nth-child(1) {
+    align-items: flex-end;
+  }
+  div.containerBlock div:nth-child(2) {
+    align-items: flex-start;
+  }
+  div.firstBlocks div.right {
+    margin: 0;
+    height: 40vh;
+    justify-content: center;
+    width: 50%;
+  }
+  .block {
+    width: 20vw;
+    height: 10vw;
+    font-size: 4vw;
+  }
+  div.firstBlocks div div p, div.stageFive p {
+    font-size: 4.5vw;
+  }
+  div.firstBlocks div:nth-child(2) div:nth-child(2) div.containerBlock div {
+    gap: 6vw;
+  }
+  .finish button {
+    border-radius: 4vw;
+    font-size: 3vw;
+    font-weight: 700;
+    height: 10vw;
+    width: 30vw;
+  }
+  div.firstBlocks {
+    height: auto;
+  }
+  div.firstBlocks div div.show-film {
+    height: 45vw;
+    width: 30vw;
+  }
+}

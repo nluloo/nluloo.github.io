@@ -1,0 +1,218 @@
+@charset "UTF-8";
+.firstBlocks {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.firstBlocks div {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  margin: 0 auto;
+  gap: 10%;
+}
+
+.firstBlocks div div p, .stageFive p {
+  color: #AFA17D;
+  text-align: justify;
+  font-family: Oswald;
+  font-size: 1.7vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 3px;
+}
+
+.kostyl {
+  display: none;
+}
+
+.right-items {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+
+.firstBlocks div div:nth-child(1) {
+  gap: 0;
+  height: 11vw;
+}
+
+.firstBlocks div div:nth-child(2) {
+  gap: 0;
+}
+
+.firstBlocks div div:nth-child(2) select {
+  height: 5vw;
+}
+
+.firstBlocks div div:nth-child(2) .containerBlock {
+  display: flex;
+  flex-direction: row;
+}
+
+.firstBlocks div:nth-child(2) {
+  gap: 5.5vw;
+}
+
+.firstBlocks div:nth-child(2) div:nth-child(2) .containerBlock div {
+  gap: 1.25vw;
+}
+
+.firstBlocks div:nth-child(2) div:nth-child(2) .containerBlock div button {
+  color: #AFA17D;
+}
+
+.rect div.secondBlocks {
+  margin: 0 auto;
+  margin-top: 5vw;
+  display: flex;
+  justify-content: center;
+}
+
+.secondBlocks {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 3vw;
+}
+
+.secondBlocks div:nth-child(2) div div {
+  height: 3.5vw;
+  width: 3.5vw;
+  background-color: #AFA17D;
+  border-radius: 0.5vw;
+}
+
+.secondBlocks div:nth-child(2) {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vw;
+}
+
+.secondBlocks div:nth-child(2) div {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5vw;
+}
+
+.secondBlocks .stageFive .ghgh {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.secondBlocks .stageFive .ghgh .hghg {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+.secondBlocks .stageFive .ghgh .hghg:nth-child(2) div {
+  background-color: #7B7B79;
+}
+
+.stageFive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.finish {
+  margin-bottom: 4vw;
+}
+
+.Error {
+  color: #AFA17D;
+  font-size: 4vw;
+}
+
+.pError {
+  color: #AFA17D;
+  font-family: Oswald;
+  font-size: 1.5vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 3px;
+}
+
+.firstBlocks div div.containerBlock div {
+  height: 26vw;
+}
+
+.firstBlocks div div.show-film {
+  border-radius: 16px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) -0.18%, rgba(0, 0, 0, 0) 102.53%), url("imgMain/poster116836_2.webp") lightgray 50%/cover no-repeat;
+  box-shadow: 4px 8px 10px 0px rgba(0, 0, 0, 0.3);
+  position: initial;
+  width: 12vw;
+  height: 17vw;
+  margin: 2vw 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div.right {
+  margin-top: 2vw;
+  width: 60%;
+  gap: 0;
+}
+
+.film-name {
+  font-size: 2vw;
+  margin-left: 0;
+}
+
+.type-film {
+  color: #D7CFBB;
+  text-align: justify;
+  font-family: Oswald;
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  margin: 0;
+  border-bottom: 1px solid white;
+  padding-bottom: 0.3vw;
+}
+
+.placeSeet {
+  cursor: pointer;
+}
+
+.info, .price {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5vw;
+  color: #D7CFBB;
+  font-family: "Oswald";
+}
+
+.info {
+  display: none;
+}
+
+.info p {
+  margin: 0;
+}
+
+.placeSeet.selected {
+  border: 4px solid #D44C4C;
+  box-sizing: border-box;
+}
+
+.mainInfo .rect {
+  padding-bottom: 2vw;
+}
+
+.placeSeet.occupied {
+  background-color: #7B7B79; /* Серый цвет для занятых мест */
+  cursor: not-allowed; /* Запрещаем указатель мыши для занятых мест */
+}
